@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Lato } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/navbar";
 
 const bebasNeue = Bebas_Neue({
 	weight: "400",
@@ -26,6 +27,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" className="dark:bg-darker dark:text-white">
 			<body className={`${bebasNeue.variable} ${lato.variable} antialiased`}>
+				<NavBar />
 				{children}
 			</body>
 		</html>
