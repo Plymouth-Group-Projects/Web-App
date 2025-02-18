@@ -19,7 +19,7 @@ export default function HeroSection() {
 		<>
 			<div className="container mx-auto max-w-[380px] sm:max-w-[680px] lg:max-w-[930px] xl:max-w-[1440px] my-[60px]">
 				<div className="grid lg:grid-cols-2 grid-cols-1 xl:gap-8 gap-4 ">
-					<div className="mt-[60px] flex flex-col text-center lg:text-left items-center lg:items-start">
+					<div className="flex flex-col text-center lg:text-left items-center lg:items-start">
 						<h1 className="xl:text-6xl sm:text-5xl text-4xl font-bebas tracking-wide">
 							WELCOME TO <span className="text-lightest">FINDWORK</span> <br />
 							YOUR GATEWAY TO OPPORTUNITIES
@@ -45,7 +45,7 @@ export default function HeroSection() {
 					</div>
 					<div className="container my-[60px] xl:my-0">
 						<Carousel plugins={[plugin.current]} className="w-full gap-0">
-							<CarouselContent className="sm:pl-10">
+							<CarouselContent className="sm:pl-10 gap-4">
 								<CarouselItem>
 									<Image
 										src="/carousel-photo1.png"
