@@ -1,4 +1,3 @@
-
 "use client"
 import React from 'react'
 
@@ -14,7 +13,6 @@ import {
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
   PaginationItem,
   PaginationLink,
   PaginationNext,
@@ -23,7 +21,7 @@ import {
 
 import Autoplay from 'embla-carousel-autoplay'
 import { CarouselApi } from "@/components/ui/carousel"
-import { isExternal } from 'util/types'
+import { Circle } from 'lucide-react'
 
 export default function Services() {
   const [activeIndex, setActiveIndex] = React.useState(0)
@@ -130,11 +128,11 @@ export default function Services() {
             </CarouselContent>
         </Carousel>
         <Pagination className='flex justify-center mt-5 mb-10'>
-          <PaginationContent className='gap-3'>
+          <PaginationContent>
             <PaginationItem>
               <PaginationPrevious 
                 onClick={() => api?.scrollPrev()}
-                className="cursor-pointer hover:bg-darkest/30"
+                className="cursor-pointer hover:text-lightest"
               />
             </PaginationItem>
             
@@ -143,9 +141,9 @@ export default function Services() {
                 <PaginationLink
                   onClick={() => handlePaginationClick(index)}
                   isActive={activeIndex === index}
-                  className={activeIndex === index ? 'bg-darkest/30 text-white border-none' : 'text-gray-300'}
+                  className='cursor-pointer border-none'
                 >
-                  {index + 1}
+                  <Circle className={`scale-75 ${activeIndex == index ? "fill-white":""}`} />
                 </PaginationLink>
               </PaginationItem>
             ))}
@@ -153,7 +151,7 @@ export default function Services() {
             <PaginationItem>
               <PaginationNext 
                 onClick={() => api?.scrollNext()}
-                className="cursor-pointer hover:bg-darkest/30"
+                className="cursor-pointer hover:text-lightest"
               />
             </PaginationItem>
           </PaginationContent>
