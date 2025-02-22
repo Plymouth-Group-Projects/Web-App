@@ -13,7 +13,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
 	const plugin = React.useRef(
-		Autoplay({ delay: 3000, stopOnInteraction: true }),
+		Autoplay({ delay: 4000, stopOnInteraction: true }),
 	);
 	return (
 		<>
